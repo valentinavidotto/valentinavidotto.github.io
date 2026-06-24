@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      max-width: 540px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--ink-2);
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--ink-2);
+      max-width: 420px;
+      line-height: 1.65;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+      padding: 1.5rem;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      display: block;
+      transition: background 0.15s;
+    }
+
+    .card:hover { background: var(--bg-2); text-decoration: none; }
+
+    .card:nth-child(even)  { border-right: none; }
+    .card:nth-child(3),
+    .card:nth-child(4)     { border-bottom: none; }
+
+    .card-label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-arrow {
+      font-size: 16px;
+      color: var(--ink-3);
+      transition: transform 0.15s;
+    }
+
+    .card:hover .card-arrow { transform: translate(3px, -3px); }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .card { border-right: none !important; }
+      .card:nth-child(3),
+      .card:nth-child(4) { border-bottom: 1px solid var(--line) !important; }
+      .card:last-child { border-bottom: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <nav>
+      <span class="nav-name">Your Name</span>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="market-view.html">Market view</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>Markets, <em>ideas,</em><br>and what comes next.</h1>
+      <p>Investor and writer. I publish my market views, selected articles, and media appearances here.</p>
+    </div>
+
+    <div class="card-grid">
+      <a href="market-view.html" class="card">
+        <div class="card-label">Latest</div>
+        <div class="card-title">Market view <span class="card-arrow">↗</span></div>
+        <div class="card-desc">Current macro thesis and sector takes.</div>
+      </a>
+      <a href="resume.html" class="card">
+        <div class="card-label">Background</div>
+        <div class="card-title">Resume <span class="card-arrow">↗</span></div>
+        <div class="card-desc">Experience, roles, and education.</div>
+      </a>
+      <a href="articles.html" class="card">
+        <div class="card-label">Writing</div>
+        <div class="card-title">Articles <span class="card-arrow">↗</span></div>
+        <div class="card-desc">Published pieces across outlets.</div>
+      </a>
+      <a href="interviews.html" class="card">
+        <div class="card-label">Media</div>
+        <div class="card-title">Interviews <span class="card-arrow">↗</span></div>
+        <div class="card-desc">Podcasts, TV, and press appearances.</div>
+      </a>
+    </div>
+
+    <footer>
+      <span>Your Name</span>
+      <span>yourname@email.com</span>
+    </footer>
+  </div>
+</body>
+</html>
